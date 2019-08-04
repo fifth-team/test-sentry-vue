@@ -7,7 +7,11 @@ import * as Integrations from '@sentry/integrations'
 
 Sentry.init({
   dsn: 'https://7ab75385e1ae4286a7052a7338988f67@sentry.io/1519993',
-  integrations: [new Integrations.Vue({ Vue, attachProps: true })]
+  integrations: [new Integrations.Vue({
+    Vue,
+    attachProps: true
+  })],
+  release: 'pro@1.0.1'
 })
 Vue.config.productionTip = false
 
